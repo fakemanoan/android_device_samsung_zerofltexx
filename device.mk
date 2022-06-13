@@ -75,11 +75,7 @@ DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
 # Ramdisk
 PRODUCT_PACKAGES += \
-	fstab.samsungexynos7420 \
-	init.baseband.rc \
-	init.gps.rc \
-	init.zerofltexx.rc \
-	ueventd.samsungexynos7420.rc
+	init.zerofltexx.rc
 
 # Sensors
 PRODUCT_COPY_FILES += \
