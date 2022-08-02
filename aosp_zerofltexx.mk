@@ -23,10 +23,10 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_l.mk)
 
 # Inherit common Lineage phone.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 
 # Set those variables here to overwrite the inherited values.
-PRODUCT_NAME := lineage_zerofltexx
+PRODUCT_NAME := aosp_zerofltexx
 PRODUCT_DEVICE := zerofltexx
 PRODUCT_MODEL := SM-G920F
 PRODUCT_BRAND := samsung
