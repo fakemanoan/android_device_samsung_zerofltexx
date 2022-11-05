@@ -147,12 +147,22 @@ bin/lhd
 lib64/hw/gps.default.so
 lib/hw/sensors.universal7420.so
 lib64/hw/sensors.universal7420.so
+vendor/lib64/libsec-ril-dsds.so
+vendor/lib64/egl/libGLES_mali.so
+vendor/lib64/libsec-ril.so
+vendor/lib/libsec-ril-dsds.so
+vendor/lib/soundfx/libLifevibes_lvvetx.so
+vendor/lib/soundfx/libLifevibes_lvverx.so
+vendor/lib/egl/libGLES_mali.so
+vendor/lib/libsec-ril.so
 lib/libfloatingfeature.so
 lib64/libfloatingfeature.so
 lib/libsensorlistener.so
 lib64/libsensorlistener.so
 lib/libwrappergps.so
 lib64/libwrappergps.so
+
+# HWC blobs
 
 # Wi-Fi
 etc/wifi/bcmdhd_apsta.bin:vendor/etc/wifi/bcmdhd_apsta.bin
