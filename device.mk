@@ -27,5 +27,9 @@ DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 # Soong
 PRODUCT_SOONG_NAMESPACES += $(LOCAL_PATH)
 
+# Wi-Fi
+PRODUCT_PACKAGES += \
+    WifiOverlay
+
 # Call the proprietary
 $(call inherit-product, vendor/samsung/zerofltexx/zerofltexx-vendor.mk)
