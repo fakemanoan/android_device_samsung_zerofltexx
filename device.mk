@@ -51,6 +51,10 @@ PRODUCT_COPY_FILES += \
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
+# Wi-Fi
+PRODUCT_PACKAGES += \
+    WifiOverlay
+
 # Sensors
 PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/configs/sensors/gps.xml:system/etc/gps.xml \
