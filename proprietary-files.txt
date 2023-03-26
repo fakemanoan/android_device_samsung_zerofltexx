@@ -10,6 +10,17 @@ lib64/libegis_fp_normal_sensor_test.so
 lib/libsynaFpSensorTestNwd.so
 lib64/libsynaFpSensorTestNwd.so
 
+# Gatekeeper - from A810SKSU2CSL1
+vendor/lib/hw/gatekeeper.exynos7420.so:vendor/lib/hw/gatekeeper.universal7420.so
+vendor/lib64/hw/gatekeeper.exynos7420.so:vendor/lib64/hw/gatekeeper.universal7420.so
+
+# Keymaster - from A810SKSU2CSL1
+lib64/vendor.samsung.security.skeymaster@3.0.so:vendor/lib64/vendor.samsung.security.skeymaster@3.0.so
+vendor/lib64/libkeymaster_mdfpp.so
+vendor/lib64/libkeymaster_helper.so
+vendor/lib64/libskeymaster.so
+vendor/lib64/hw/keystore.mdfpp.so
+
 # Mobicore
 app/FFFFFFFF000000000000000000000001.drbin:vendor/app/FFFFFFFF000000000000000000000001.drbin
 app/mcRegistry/00060308060501020000000000000000.tlbin:vendor/app/mcRegistry/00060308060501020000000000000000.tlbin
@@ -54,6 +65,8 @@ lib/libsec-ril-dsds.so:vendor/lib/libsec-ril-dsds.so
 lib64/libsec-ril-dsds.so:vendor/lib64/libsec-ril-dsds.so
 lib/libsec-ril.so:vendor/lib/libsec-ril.so
 lib64/libsec-ril.so:vendor/lib64/libsec-ril.so
+
+# Protobuf 2.6 - precompiled from https://github.com/Exynos7580/android_external_protobuf-compat-2.6
 lib/libprotobuf-cpp-full.so:lib/libprotobuf-cpp-fl26.so
 lib64/libprotobuf-cpp-full.so:lib64/libprotobuf-cpp-fl26.so
 
