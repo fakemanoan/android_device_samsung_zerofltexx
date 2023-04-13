@@ -150,6 +150,14 @@
 		<ctl name="AIF4TX1 Input 1 Volume" value="32" />
 		<ctl name="AIF4TX2 Input 1 Volume" value="32" />
 	</path>
+    
+    <path name="mute-handset">
+		<ctl name="RCV Switch" value="0" />
+	</path>
+
+        <path name="unmute-handset">
+		<ctl name="RCV Switch" value="1" />
+	</path>
 
 	<path name="mute-headset">
 		<ctl name="HP Switch" value="0" />
@@ -198,6 +206,7 @@
 	<path name="media-headset">
 		<path name="mute-speaker" />
 		<path name="unmute-headset" />
+        <path name="mute-handset" />
 		<ctl name="HPOUT1 DRE Switch" value="1" />
 		<ctl name="HPOUT1 EDRE Switch" value="1" />
 		<ctl name="HPOUT1L Input 1" value="AIF1RX1" />
@@ -268,6 +277,7 @@
     <path name="incall_nb-headset">
 		<path name="mute-speaker" />
 		<path name="unmute-headset" />
+        <path name="mute-handset" />
 		<ctl name="AIF2 Mode" value="Slave" />
 		<ctl name="ASRC1 Rate 1" value="SYNCCLK rate 1" />
 		<ctl name="ASRC1IN2L Input" value="AIF2RX1" />
@@ -276,6 +286,7 @@
 		<ctl name="HPOUT1R Input 2" value="ASRC1IN2L" />
 		<ctl name="HPOUT1L Input 1" value="AIF1RX1" />
 		<ctl name="HPOUT1R Input 1" value="AIF1RX2" />
+        <ctl name="SPK Switch" value="0" />
 		<!-- Call recording route -->
 		<ctl name="AIF1TX1 Input 2" value="ASRC1IN2L" />
 		<ctl name="AIF1TX2 Input 2" value="ASRC1IN2L" />
@@ -299,6 +310,7 @@
 		<ctl name="ASRC1IN2L Input" value="AIF2RX1" />
 		<ctl name="ASRC1IN2R Input" value="AIF2RX2" />
 		<!-- Call recording route -->
+        <ctl name="SPK Switch" value="0" />
 		<ctl name="AIF1TX1 Input 2" value="ASRC1IN2L" />
 		<ctl name="AIF1TX2 Input 2" value="ASRC1IN2R" />
 	</path>
@@ -336,6 +348,7 @@
 	<path name="incall_wb-speaker">
 		<path name="mute-headset" />
 		<path name="unmute-speaker" />
+        <path name="mute-handset" />
 		<ctl name="AIF2 Mode" value="Slave" />
 		<ctl name="Sample Rate 2" value="16kHz" />
 		<ctl name="ASRC1 Rate 1" value="SYNCCLK rate 2" />
@@ -392,6 +405,10 @@
 	</path>
 
     <path name="media-bt-sco-headset">
+        <path name="mute-speaker" />
+        <path name="mute-headset" />
+        <path name="mute-handset" />
+        <ctl name="SPK Switch" value="0" />
 		<ctl name="ISRC2 FSL" value="SYNCCLK rate 2" />
 		<ctl name="ISRC2 FSH" value="SYNCCLK rate 1" />
 		<ctl name="AIF3TX1 Input 1" value="ISRC2DEC1" />
@@ -442,7 +459,7 @@
 	<path name="incall_nb-handset-mic">
 		<ctl name="Headset Mic Switch" value="0" />
 		<ctl name="Main Mic Switch" value="1" />
-		<ctl name="Sub Mic Switch" value="1" />
+		<ctl name="Sub Mic Switch" value="0" />
 		<ctl name="Sample Rate 3" value="8kHz" />
 		<ctl name="DSP2 Rate" value="SYNCCLK rate 3" />
 		<ctl name="DSP3 Rate" value="SYNCCLK rate 3" />
@@ -477,7 +494,7 @@
 
     <path name="incall_nb-speaker-mic">
 		<ctl name="Headset Mic Switch" value="0" />
-		<ctl name="Main Mic Switch" value="1" />
+		<ctl name="Main Mic Switch" value="0" />
 		<ctl name="Sub Mic Switch" value="1" />
 		<ctl name="Sample Rate 3" value="8kHz" />
 		<ctl name="DSP2 Rate" value="SYNCCLK rate 3" />
@@ -494,8 +511,8 @@
 		<ctl name="DSP3 Firmware" value="TX_NB" />
 		<ctl name="DSP2 Aux 6" value="ISRC1DEC2" />
 		<ctl name="DSP3 Virtual Input" value="Shared Memory" />
-		<ctl name="DSP3L Input 1" value="ISRC1DEC2" />
-		<ctl name="DSP3R Input 1" value="ISRC1DEC1" />
+		<ctl name="DSP3L Input 1" value="ISRC1DEC1" />
+		<ctl name="DSP3R Input 1" value="ISRC1DEC2" />
 		<ctl name="DSP3 Aux 1" value="ISRC1DEC4" />
 		<ctl name="ISRC3INT1 Input" value="DSP3.1" />
 		<ctl name="ASRC1IN1L Input" value="ISRC3INT1" />
@@ -521,7 +538,6 @@
 	</path>
 
     <path name="incall_nb-bt-sco-headset-in">
-		<path name="mute-speaker" />
 		<ctl name="Sample Rate 2" value="8kHz" />
 		<ctl name="ASRC1 Rate 1" value="SYNCCLK rate 1" />
 		<ctl name="ISRC2 FSL" value="SYNCCLK rate 2" />
@@ -541,7 +557,7 @@
 	<path name="incall_wb-handset-mic">
 		<ctl name="Headset Mic Switch" value="0" />
 		<ctl name="Main Mic Switch" value="1" />
-		<ctl name="Sub Mic Switch" value="1" />
+		<ctl name="Sub Mic Switch" value="0" />
 		<ctl name="Sample Rate 2" value="16kHz" />
 		<ctl name="DSP2 Rate" value="SYNCCLK rate 2" />
 		<ctl name="DSP3 Rate" value="SYNCCLK rate 2" />
@@ -574,7 +590,7 @@
 
     <path name="incall_wb-speaker-mic">
 		<ctl name="Headset Mic Switch" value="0" />
-		<ctl name="Main Mic Switch" value="1" />
+		<ctl name="Main Mic Switch" value="0" />
 		<ctl name="Sub Mic Switch" value="1" />
 		<ctl name="Sample Rate 2" value="16kHz" />
 		<ctl name="DSP2 Rate" value="SYNCCLK rate 2" />
@@ -590,8 +606,8 @@
 		<ctl name="DSP3 Firmware" value="TX_WB" />
 		<ctl name="DSP2 Aux 6" value="ISRC2DEC2" />
 		<ctl name="DSP3 Virtual Input" value="Shared Memory" />
-		<ctl name="DSP3L Input 1" value="ISRC2DEC2" />
-		<ctl name="DSP3R Input 1" value="ISRC2DEC1" />
+		<ctl name="DSP3L Input 1" value="ISRC2DEC1" />
+		<ctl name="DSP3R Input 1" value="ISRC2DEC2" />
 		<ctl name="DSP3 Aux 1" value="ISRC2DEC4" />
 		<ctl name="ASRC1IN1L Input" value="DSP3.1" />
 		<ctl name="ASRC1IN1R Input" value="DSP3.1" />
@@ -609,7 +625,6 @@
 	</path>
 
     <path name="incall_wb-bt-sco-headset-in">
-		<path name="mute-speaker" />
 		<ctl name="Sample Rate 2" value="16kHz" />
 		<ctl name="ASRC1 Rate 1" value="SYNCCLK rate 1" />
 		<ctl name="ISRC2 FSL" value="SYNCCLK rate 2" />
@@ -821,8 +836,8 @@
 
     <path name="gain-camcorder-headset-mic">
         <ctl name="IN2L Volume" value="30" />
-        <ctl name="IN2L Digital Volume" value="103" />
-        <ctl name="LHPF1 Input 1 Volume" value="32" />
+        <ctl name="IN2L Digital Volume" value="168" />
+        <ctl name="LHPF1 Input 1 Volume" value="40" />
     </path>
 
     <path name="gain-camcorder-headphone-mic">
